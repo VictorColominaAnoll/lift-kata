@@ -7,6 +7,7 @@ import java.util.Objects;
 public class Lift {
 
     private List<DestinationFloor> destinations;
+    private int floor;
 
     public Lift() {
         destinations = new ArrayList<>();
@@ -34,5 +35,14 @@ public class Lift {
     @Override
     public int hashCode() {
         return Objects.hash(destinations);
+    }
+
+    public int getCurrentPosition() {
+        return floor;
+    }
+
+    public void moveToNextDestination() {
+        this.floor = destinations.get(0).getFloor();
+        destinations.remove(0);
     }
 }

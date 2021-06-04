@@ -12,6 +12,10 @@ public class DestinationFloor {
         this.direction = direction;
     }
 
+    public int getFloor() {
+        return floor;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
